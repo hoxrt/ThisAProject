@@ -32,7 +32,7 @@ $categories_result = mysqli_query($conn, $categories_sql);
             <h1>لوحة تحكم المشرف</h1>
             <div class="nav-links">
                 <a href="../index.php" class="btn btn-secondary">الصفحة الرئيسية</a>
-                <a href="../faculty_fees.php" class="btn btn-info">عرض أسعار المكتبة</a>
+                <a href="../library_prices.php" class="btn btn-info">عرض أسعار المكتبة</a>
                 <a href="../auth/logout.php" class="btn btn-danger">تسجيل الخروج</a>
             </div>
         </div>

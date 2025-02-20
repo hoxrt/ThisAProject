@@ -1,0 +1,126 @@
+/* Utilities and Effects */
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -468px 0; }
+    100% { background-position: 468px 0; }
+}
+
+/* Loading States */
+.loading {
+    animation: shimmer 1s linear infinite;
+    background: linear-gradient(
+        to right,
+        #f6f7f8 8%,
+        #edeef1 18%,
+        #f6f7f8 33%
+    );
+    background-size: 800px 104px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    .navbar,
+    .form-container,
+    .product-card,
+    .auth-container {
+        background-color: #1e1e1e;
+        border-color: #333;
+    }
+    
+    .form-control {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+        border-color: #404040;
+    }
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.3);
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+    
+    .full-width-mobile {
+        width: 100% !important;
+    }
+}
+
+/* Spacing Utilities */
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-3 { margin: 1rem; }
+.m-4 { margin: 1.5rem; }
+.m-5 { margin: 3rem; }
+
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+.p-5 { padding: 3rem; }
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.text-bold { font-weight: bold; }
+.text-light { font-weight: 300; }
+
+/* Flex Utilities */
+.d-flex { display: flex; }
+.flex-column { flex-direction: column; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* Grid Utilities */
+.d-grid { display: grid; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 1rem; }
+.gap-4 { gap: 1.5rem; }

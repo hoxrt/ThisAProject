@@ -71,7 +71,7 @@ $categories_result = mysqli_query($conn, $categories_sql);
         <div class="navbar-container">
             <h1>سوق القرطاسية الجامعي</h1>
             <div class="nav-links">
-                <a href="faculty_fees.php" class="btn btn-info">رسوم الكليات</a>
+                <a href="library_prices.php" class="btn btn-info">أسعار مكتبة الكلية</a>
                 <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
                     <span>مرحباً <?php echo htmlspecialchars($_SESSION["username"]); ?></span>
                     <?php if($_SESSION["role"] === "admin"): ?>
